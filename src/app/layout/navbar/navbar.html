@@ -1,10 +1,11 @@
 <nav class="app-header position-relative d-flex align-items-center justify-content-center">
-    <button
-        class="back-btn btn btn-outline-secondary position-absolute start-0 m-1"
-        (click)="goBack()">
-        Indietro
-    </button>
-
+    @if (!isHomePage()) {
+        <button
+            class="back-btn btn btn-outline-secondary position-absolute start-0 m-1"
+            (click)="goBack()">
+            Indietro
+        </button>
+    }
     <h4 class="m-0 fw-bold">
         Quartieri di Genova
     </h4>

@@ -28,6 +28,16 @@ export class MunicipiService {
     return this._municipi().find((m) => m.id === id);
   }
 
+  getCircoscrizioneById(id: number): Circoscrizione | undefined {
+    for (const municipio of this._municipi()) {
+      const circoscrizione = municipio.circoscrizioni.find((c) => c.id === id);
+      if (circoscrizione) {
+        return circoscrizione;
+      }
+    }
+    return undefined;
+  }
+
   getCircoscrizioniByMunicipio(municipioId: number): Circoscrizione[] {
     return this._municipi().find((m) => m.id === municipioId)?.circoscrizioni ?? [];
   }

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed, signal } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MunicipiService } from '../../../../core/services/municipi.service';
 
@@ -13,6 +13,7 @@ export class UnitaUrbanisticheListComponent {
   private route = inject(ActivatedRoute);
 
   id = Number(this.route.snapshot.paramMap.get('id'));
+  nome = computed(() => this.municipiService.getCircoscrizioneById(this.id)?.nome);
 
-  unitaUrbanistiche = this.municipiService.getUnitaUrbanisticheByCircoscrizione(this.id);
+  unitaUrbanistiche = computed(() => this.municipiService.getUnitaUrbanisticheByCircoscrizione(this.id));
 }
