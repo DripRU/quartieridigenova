@@ -1,0 +1,311 @@
+[
+    {
+        "id": 1,
+        "nome": "Municipio 1 Centro Est",
+        "popolazione": 86850,
+        "circoscrizioni": [
+            {
+                "id": 11,
+                "nome": "Oregina-Lagaccio",
+                "popolazione": 21573,
+                "unita_urbanistiche": [
+                    { "id": 31, "nome": "Lagaccio", "popolazione": 10235 },
+                    { "id": 32, "nome": "Oregina", "popolazione": 11338 }
+                ]
+            },
+            {
+                "id": 12,
+                "nome": "Pre-Molo-Maddalena",
+                "popolazione": 22383,
+                "unita_urbanistiche": [
+                    { "id": 33, "nome": "Pre", "popolazione": 7547 },
+                    { "id": 34, "nome": "Molo", "popolazione": 5448 },
+                    { "id": 35, "nome": "Maddalena", "popolazione": 9388 }
+                ]
+            },
+            {
+                "id": 13,
+                "nome": "Castelletto",
+                "popolazione": 27790,
+                "unita_urbanistiche": [
+                    { "id": 36, "nome": "S. Nicola", "popolazione": 8281 },
+                    { "id": 37, "nome": "Castelletto", "popolazione": 11767 },
+                    { "id": 38, "nome": "Manin", "popolazione": 7242 }
+                ]
+            },
+            {
+                "id": 14,
+                "nome": "Portoria",
+                "popolazione": 15158,
+                "unita_urbanistiche": [
+                    { "id": 39, "nome": "S. Vincenzo", "popolazione": 5481 },
+                    { "id": 40, "nome": "Carignano", "popolazione": 9677 }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nome": "Municipio 2 Centro Ovest",
+        "popolazione": 67085,
+        "circoscrizioni": [
+            {
+                "id": 9,
+                "nome": "Sampierdarena",
+                "popolazione": 45028,
+                "unita_urbanistiche": [
+                    { "id": 24, "nome": "Campasso", "popolazione": 8313},
+                    { "id": 25, "nome": "S. Gaetano", "popolazione": 9005 },
+                    { "id": 26, "nome": "Belvedere", "popolazione": 8116 },
+                    { "id": 27, "nome": "Sampierdarena", "popolazione": 8912 },
+                    { "id": 28, "nome": "S. Bartolomeo", "popolazione": 8682 }
+                ]
+            },
+            {
+                "id": 10,
+                "nome": "San Teodoro",
+                "popolazione": 21957,
+                "unita_urbanistiche": [
+                    { "id": 29, "nome": "Angeli", "popolazione": 10394 },
+                    { "id": 30, "nome": "S. Teodoro", "popolazione": 11563 }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nome": "Municipio 3 Bassa Val Bisagno",
+        "popolazione": 71094,
+        "circoscrizioni": [
+            {
+                "id": 16,
+                "nome": "S. Fruttuoso",
+                "popolazione": 32936,
+                "unita_urbanistiche": [
+                    { "id": 43, "nome": "S. Agata", "popolazione": 8909 },
+                    { "id": 44, "nome": "S. Fruttuoso", "popolazione": 24027 }
+                ]
+            },
+            {
+                "id": 17,
+                "nome": "Marassi",
+                "popolazione": 38158,
+                "unita_urbanistiche": [
+                    { "id": 45, "nome": "Quezzi", "popolazione": 10245 },
+                    { "id": 46, "nome": "Fereggiano", "popolazione": 8568 },
+                    { "id": 47, "nome": "Marassi", "popolazione": 10906 },
+                    { "id": 48, "nome": "Forte Quezzi", "popolazione": 8439 }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nome": "Municipio 4 Media Val Bisagno",
+        "popolazione": 53528,
+        "circoscrizioni": [
+            {
+                "id": 18,
+                "nome": "Staglieno",
+                "popolazione": 19566,
+                "unita_urbanistiche": [
+                    { "id": 49, "nome": "Parenzo", "popolazione": 13934 },
+                    { "id": 50, "nome": "S. Pantaleo", "popolazione": 5632 }
+                ]
+            },
+            {
+                "id": 19,
+                "nome": "Molassana",
+                "popolazione": 24909,
+                "unita_urbanistiche": [
+                    { "id": 51, "nome": "Montesignano", "popolazione": 12344 },
+                    { "id": 52, "nome": "S. Eusebio", "popolazione": 2372 },
+                    { "id": 53, "nome": "Molassana", "popolazione": 8793 }
+                ]
+            },
+            {
+                "id": 20,
+                "nome": "Struppa",
+                "popolazione": 9463,
+                "unita_urbanistiche": [
+                    { "id": 54, "nome": "Doria", "popolazione": 4073 },
+                    { "id": 55, "nome": "Prato", "popolazione": 5390 }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "nome": "Municipio 5 Val Polcevera",
+        "popolazione": 58205,
+        "circoscrizioni": [
+            {
+                "id": 5,
+                "nome": "Rivarolo",
+                "popolazione": 26094,
+                "unita_urbanistiche": [
+                    { "id": 13, "nome": "Borzoli Est", "popolazione": 2281 },
+                    { "id": 14, "nome": "Certosa", "popolazione": 12047 },
+                    { "id": 15, "nome": "Rivarolo", "popolazione": 8912 },
+                    { "id": 16, "nome": "Teglia", "popolazione": 4567 },
+                    { "id": 17, "nome": "Begato", "popolazione": 4134 }
+                ]
+            },
+            {
+                "id": 6,
+                "nome": "Bolzaneto",
+                "popolazione": 16393,
+                "unita_urbanistiche": [
+                    { "id": 18, "nome": "Bolzaneto", "popolazione": 11830 },
+                    { "id": 19, "nome": "Morego", "popolazione": 1463 }
+                ]
+            },
+            {
+                "id": 7,
+                "nome": "Pontedecimo",
+                "popolazione": 11461,
+                "unita_urbanistiche": [
+                    { "id": 20, "nome": "S. Quirico", "popolazione": 3769 },
+                    { "id": 21, "nome": "Pontedecimo", "popolazione": 7692 }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nome": "Municipio 6 Medio Ponente",
+        "popolazione": 58205,
+        "circoscrizioni": [
+            {
+                "id": 4,
+                "nome": "Sestri",
+                "popolazione": 43505,
+                "unita_urbanistiche": [
+                    { "id": 9, "nome": "Sestri", "popolazione": 18156 },
+                    { "id": 10, "nome": "S. Giovanni Battista", "popolazione": 13607 },
+                    { "id": 11, "nome": "Calcinara", "popolazione": 9763 },
+                    { "id": 12, "nome": "Borzoli Ovest", "popolazione": 2179 }
+                ]
+            },
+            {
+                "id": 8,
+                "nome": "Cornigliano",
+                "popolazione": 14700,
+                "unita_urbanistiche": [
+                    { "id": 22, "nome": "Cornigliano", "popolazione": 13598 },
+                    { "id": 23, "nome": "Campi", "popolazione": 1102 }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "nome": "Municipio 7 Ponente",
+        "popolazione": 55818,
+        "circoscrizioni": [
+            {
+                "id": 1,
+                "nome": "Voltri",
+                "popolazione": 11632,
+                "unita_urbanistiche": [
+                    { "id": 1, "nome": "Crevari", "popolazione": 1138 },
+                    { "id": 2, "nome": "Voltri", "popolazione": 10494 }
+                ]
+            },
+            {
+                "id": 2,
+                "nome": "Pra",
+                "popolazione": 18941,
+                "unita_urbanistiche": [
+                    { "id": 3, "nome": "Ca Nuova", "popolazione": 5378 },
+                    { "id": 4, "nome": "Palmaro", "popolazione": 6996 },
+                    { "id": 5, "nome": "Pra", "popolazione": 6567 }
+                ]
+            },
+            {
+                "id": 3,
+                "nome": "Pegli",
+                "popolazione": 25245,
+                "unita_urbanistiche": [
+                    { "id": 6, "nome": "Castelluccio", "popolazione": 4919 },
+                    { "id": 7, "nome": "Pegli", "popolazione": 15936 },
+                    { "id": 8, "nome": "Multedo", "popolazione": 4390 }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "nome": "Municipio 8 Medio Levante",
+        "popolazione": 57868,
+        "circoscrizioni": [
+            {
+                "id": 15,
+                "nome": "Foce",
+                "popolazione": 15398,
+                "unita_urbanistiche": [
+                    { "id": 41, "nome": "Foce", "popolazione": 5302 },
+                    { "id": 42, "nome": "Brignole", "popolazione": 10096 }
+                ]
+            },
+            {
+                "id": 22,
+                "nome": "S. Martino",
+                "popolazione": 14281,
+                "unita_urbanistiche": [
+                    { "id": 60, "nome": "Chiappeto", "popolazione": 5655 },
+                    { "id": 61, "nome": "S. Martino", "popolazione": 8626 }
+                ]
+            },
+            {
+                "id": 23,
+                "nome": "S. Francesco d'Albaro",
+                "popolazione": 28189,
+                "unita_urbanistiche": [
+                    { "id": 62, "nome": "Albaro", "popolazione": 8699 },
+                    { "id": 63, "nome": "S. Giuliano", "popolazione": 8211 },
+                    { "id": 64, "nome": "Lido", "popolazione": 5711 },
+                    { "id": 65, "nome": "Puggia", "popolazione": 5568 }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "nome": "Municipio 9 Levante",
+        "popolazione": 67197,
+        "circoscrizioni": [
+            {
+                "id": 21,
+                "nome": "Valle Sturla",
+                "popolazione": 13620,
+                "unita_urbanistiche": [
+                    { "id": 56, "nome": "Bavari", "popolazione": 995 },
+                    { "id": 57, "nome": "S. Desiderio", "popolazione": 1784 },
+                    { "id": 58, "nome": "Apparizione", "popolazione": 2398 },
+                    { "id": 59, "nome": "Borgoratti", "popolazione": 8479 }
+                ]
+            },
+            {
+                "id": 24,
+                "nome": "Sturla-Quarto",
+                "popolazione": 28424,
+                "unita_urbanistiche": [
+                    { "id": 66, "nome": "Sturla", "popolazione": 7688 },
+                    { "id": 67, "nome": "Quarto", "popolazione": 7710 },
+                    { "id": 68, "nome": "Quartara", "popolazione": 5636 },
+                    { "id": 69, "nome": "Castagna", "popolazione": 7390 }
+                ]
+            },
+            {
+                "id": 25,
+                "nome": "Nervi-Quinto-S.Ilario",
+                "popolazione": 18593,
+                "unita_urbanistiche": [
+                    { "id": 70, "nome": "Quinto", "popolazione": 8109 },
+                    { "id": 71, "nome": "Nervi", "popolazione": 10484 }
+                ]
+            }
+        ]
+    }
+]

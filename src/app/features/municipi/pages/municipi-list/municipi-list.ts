@@ -1,0 +1,21 @@
+import { Component, inject} from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { MunicipiService } from '../../../../core/services/municipi.service';
+
+@Component({
+  selector: 'app-municipi-list',
+  standalone: true,
+  imports: [RouterModule],
+  templateUrl: './municipi-list.html',
+  styleUrl: './municipi-list.css',
+})
+export class MunicipiListComponent {
+  // constructor(private municipiService: MunicipiService) {}
+  // municipi$: Observable<Municipio[]> = this.municipiService.getMunicipi();
+
+  // iniezione del servizio MunicipiService usando inject() invece del costruttore
+  private municipiService = inject(MunicipiService);
+
+  // definiamo municipi come una signal che contiene un array di Municipio, inizialmente vuoto
+  municipi = this.municipiService.getMunicipi();
+}

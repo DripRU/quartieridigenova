@@ -1,0 +1,11 @@
+.app-header {
+    height: 60px;
+    border-bottom: 1px solid #eee;
+    background-color: white;
+}
+
+.back-btn {
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.1s;
+}

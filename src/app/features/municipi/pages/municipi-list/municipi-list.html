@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="row g-4">
+        @for (municipio of municipi(); track municipio.id) {
+        <div class="col-md-4">
+            <a [routerLink]="['/municipio', municipio.id]"
+                class="card text-center shadow-sm h-100 text-decoration-none clickable-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ municipio.nome }}</h5>
+                    <div class="p-2 rounded text-center">
+                        <span class="d-block text-muted small">Popolazione</span>
+                        <span class="fs-3 fw-bold text-dark">
+                            {{ municipio.popolazione }}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        }
+    </div>
+</div>
