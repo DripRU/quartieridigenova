@@ -11,6 +11,7 @@ export class MunicipiService {
   // questa proprietà non è direttamente accessibile dall'esterno del servizio,
   // ma può essere aggiornata internamente e letta tramite un metodo pubblico
   private _municipi = signal<Municipio[]>([]);
+  private _circoscrizioni = signal<Circoscrizione[]>([]);
 
   // costruzione del servizio con l'iniezione di HttpClient
   constructor(private http: HttpClient) {
