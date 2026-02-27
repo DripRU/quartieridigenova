@@ -17,3 +17,12 @@ export interface Municipio {
     popolazione: number;
     circoscrizioni: Circoscrizione[];
 }
+
+export interface SearchResult {
+    id: number;
+    nome: string;
+    popolazione: number;
+    circoscrizionePadreId: number;
+    circoscrizionePadreNome: string;
+    municipioPadreNome: string;
+}

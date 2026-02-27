@@ -2,11 +2,12 @@ import { Component, inject} from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MunicipiService } from '../../../../core/services/municipi.service';
 import { FormatNumberPipe } from '../../../../core/pipes/format-number-pipe';
+import { Search } from '../../../search/search';
 
 @Component({
   selector: 'app-municipi-list',
   standalone: true,
-  imports: [RouterModule, FormatNumberPipe],
+  imports: [RouterModule, FormatNumberPipe, Search],
   templateUrl: './municipi-list.html',
   styleUrl: './municipi-list.css',
 })

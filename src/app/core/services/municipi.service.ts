@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Municipio, Circoscrizione, UnitaUrbanistica } from '../models/municipio.model';
+import { Municipio, Circoscrizione, SearchResult } from '../models/municipio.model';
 
 @Injectable({ providedIn: 'root' })
 export class MunicipiService {
@@ -51,5 +51,33 @@ export class MunicipiService {
       }
     }
     return [];
+  }
+
+  searchUnitaUrbanistiche(query: string): SearchResult[] {
+    const queryLower = query.toLowerCase();
+    const results: SearchResult[] = [];
+
+    if (!query) {
+      return results;
+    }
+
+    for (const municipio of this._municipi()) {
+      for (const circoscrizione of municipio.circoscrizioni) {
+        const unitaUrbanistica = circoscrizione.unita_urbanistiche.filter((u) =>
+          u.nome.toLowerCase().includes(queryLower),
+        );
+        unitaUrbanistica.forEach((u) =>
+          results.push({
+            id: u.id,
+            nome: u.nome,
+            popolazione: u.popolazione,
+            circoscrizionePadreId: circoscrizione.id,
+            circoscrizionePadreNome: circoscrizione.nome,
+            municipioPadreNome: municipio.nome
+          }),
+        );
+      }
+    }
+    return results;
   }
 }
