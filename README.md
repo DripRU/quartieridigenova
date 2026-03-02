@@ -1,10 +1,10 @@
 # 🏙️ Quartieri di Genova
 
-🇮🇹 [Italiano](#italiano) | 🇬🇧 [English](#english)
+[Italiano](#italiano) | [English](#english)
 
 ---
 
-## <a name="italiano"></a> 🇮🇹 Italiano
+## <a name="italiano"></a> Italiano
 
 Un'applicazione web per esplorare la struttura amministrativa del territorio genovese, navigando attraverso municipi, circoscrizioni e unità urbanistiche.
 
@@ -50,7 +50,7 @@ Se noti errori nei dati o vuoi contribuire al progetto, apri una issue o una pul
 
 ---
 
-## <a name="english"></a> 🇬🇧 English
+## <a name="english"></a> English
 
 A web application to explore the administrative structure of Genoa's territory, navigating through municipalities, districts, and urban units.
 
