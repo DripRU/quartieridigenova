@@ -2,10 +2,11 @@ import { Component, inject, computed, effect } from '@angular/core';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import { MunicipiService } from '../../../../core/services/municipi.service';
 import { FormatNumberPipe } from '../../../../core/pipes/format-number-pipe';
+import { ChartComponent } from '../../../chart/chart';
 
 @Component({
   selector: 'app-unita-urbanistiche-list',
-  imports: [RouterModule, FormatNumberPipe],
+  imports: [RouterModule, FormatNumberPipe, ChartComponent],
   templateUrl: './unita-urbanistiche-list.html',
   styleUrl: './unita-urbanistiche-list.css',
 })
@@ -33,5 +34,12 @@ export class UnitaUrbanisticheListComponent {
 
   unitaUrbanistiche = computed(() =>
     this.municipiService.getUnitaUrbanisticheByCircoscrizione(this.id),
+  );
+
+  chartData = computed(() =>
+    this.unitaUrbanistiche().map((unitaUrbanistica) => ({
+      nome: unitaUrbanistica.nome,
+      popolazione: unitaUrbanistica.popolazione,
+    })),
   );
 }

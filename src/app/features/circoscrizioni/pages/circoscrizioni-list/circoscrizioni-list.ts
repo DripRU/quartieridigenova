@@ -2,10 +2,11 @@ import { Component, inject, computed, effect } from '@angular/core';
 import { MunicipiService } from '../../../../core/services/municipi.service';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 import { FormatNumberPipe } from '../../../../core/pipes/format-number-pipe';
+import { ChartComponent } from '../../../chart/chart';
 
 @Component({
   selector: 'app-circoscrizioni-list',
-  imports: [RouterModule, FormatNumberPipe],
+  imports: [RouterModule, FormatNumberPipe, ChartComponent],
   templateUrl: './circoscrizioni-list.html',
   styleUrl: './circoscrizioni-list.css',
 })
@@ -48,4 +49,11 @@ export class CircoscrizioniListComponent {
   // utilizziamo il servizio MunicipiService per ottenere le circoscrizioni
   // del municipio corrispondente all'id letto dalla route
   circoscrizioni = computed(() => this.municipiService.getCircoscrizioniByMunicipio(this.id));
+
+  chartData = computed(() =>
+    this.circoscrizioni().map((circoscrizione) => ({
+      nome: circoscrizione.nome,
+      popolazione: circoscrizione.popolazione,
+    })),
+  );
 }

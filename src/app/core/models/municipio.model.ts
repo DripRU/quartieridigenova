@@ -26,3 +26,8 @@ export interface SearchResult {
     circoscrizionePadreNome: string;
     municipioPadreNome: string;
 }
+
+export interface ChartElementData {
+    nome: string;
+    popolazione: number;
+}
