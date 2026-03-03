@@ -24,7 +24,11 @@ export class MunicipiListComponent {
 
   chartData = computed(() =>
     this.municipi().map((municipio) => ({
-      nome: municipio.nome,
+      // utilizziamo split(' ') per dividere il nome del municipio in parole singole
+      // utilizziamo slice(0, 2) per prendere le prime due parole
+      // utilizziamo join(' ') per unire le parole in una stringa
+      // il risultato finale è una stringa con il nome del municipio abbreviato per una migliore visualizzazione
+      nome: municipio.nome.split(' ').slice(0, 2).join(' '),
       popolazione: municipio.popolazione,
     })),
   );

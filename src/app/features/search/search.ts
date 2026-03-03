@@ -1,27 +1,39 @@
 import { Component, signal, inject, computed } from '@angular/core';
-import type { SearchResult } from '../../core/models/municipio.model';
 import { Router } from '@angular/router';
 import { MunicipiService } from '../../core/services/municipi.service';
+import { ReactiveFormsModule, FormControl } from '@angular/forms';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
+
+import type { SearchResult } from '../../core/models/municipio.model';
 
 @Component({
   selector: 'app-search',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './search.html',
   styleUrl: './search.css',
 })
 export class Search {
-  private municipiService = inject(MunicipiService)
-  private router = inject(Router)
+  private municipiService = inject(MunicipiService);
+  private router = inject(Router);
+  private query = signal('');
 
-  private query = signal('')
-  results = computed(() => this.municipiService.searchUnitaUrbanistiche(this.query()))
+  // creazione di un FormControl per la barra di ricerca
+  searchControl = new FormControl('');
+
+  constructor() {
+    this.searchControl.valueChanges.pipe(
+      // aspetta 300 ms prima di effettuare nuova ricerca
+      debounceTime(300),
+      // evita di aggiornare la query se il valore non cambia
+      distinctUntilChanged()
+    ).subscribe((value) => {
+      this.query.set(value ?? '');
+    });
+  }
+
+  results = computed(() => this.municipiService.searchUnitaUrbanistiche(this.query()));
 
   navigateTo(result: SearchResult): void {
     this.router.navigate(['/circoscrizione', result.circoscrizionePadreId]);
-  }
-
-  onSearch(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    this.query.set(input.value);
   }
 }

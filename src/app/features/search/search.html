@@ -2,8 +2,8 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="position-relative">
-                <input type="text" class="form-control" placeholder="Cerca unità urbanistica..."
-                    (input)="onSearch($event)">
+                <input type="text" [formControl]="searchControl" class="form-control"
+                    placeholder="Cerca unità urbanistica...">
 
                 @if (results().length > 0) {
                 <div class="position-absolute w-100 border rounded bg-white shadow-sm"
@@ -11,7 +11,8 @@
                     @for (result of results(); track result.id) {
                     <div class="p-2 border-bottom" (click)="navigateTo(result)" style="cursor: pointer;">
                         <span class="fw-bold">{{ result.nome }}</span>
-                        <span class="text-muted small"> {{ result.circoscrizionePadreNome }} ({{ result.municipioPadreNome }})</span>
+                        <span class="text-muted small"> {{ result.circoscrizionePadreNome }} ({{
+                            result.municipioPadreNome }})</span>
                     </div>
                     }
                 </div>
