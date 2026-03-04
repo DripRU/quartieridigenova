@@ -1,5 +1,5 @@
 import { Component, input, viewChild, ElementRef, effect } from '@angular/core';
-import { ChartElementData } from '../../core/models/municipio.model';
+import { ChartElementData } from '../../core/models/data.model';
 import { Chart, ArcElement, Tooltip, Legend, DoughnutController, Colors } from 'chart.js';
 
 Chart.register(ArcElement, Tooltip, Legend, DoughnutController, Colors);
@@ -15,7 +15,6 @@ export class ChartComponent {
   canvas = viewChild<ElementRef>('popChart');
 
   private chartInstance: Chart | null = null;
-
 
   constructor() {
     effect(() => {

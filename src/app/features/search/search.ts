@@ -4,7 +4,7 @@ import { DataService } from '../../core/services/data.service';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
 
-import type { SearchResult } from '../../core/models/municipio.model';
+import type { SearchResult } from '../../core/models/data.model';
 
 @Component({
   selector: 'app-search',
