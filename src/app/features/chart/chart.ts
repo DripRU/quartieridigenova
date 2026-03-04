@@ -14,6 +14,9 @@ export class ChartComponent {
   elementData = input<ChartElementData[]>();
   canvas = viewChild<ElementRef>('popChart');
 
+  private chartInstance: Chart | null = null;
+
+
   constructor() {
     effect(() => {
       const data = this.elementData();
@@ -21,6 +24,11 @@ export class ChartComponent {
 
       // controllo per evitare che il chart venga generato se non ci sono dati
       if (!ctx || !data || data.length === 0) return;
+
+      // se esiste già un chart lo distruggiamo
+      if (this.chartInstance) {
+        this.chartInstance.destroy();
+      }
 
       new Chart(ctx, {
         type: 'doughnut',
