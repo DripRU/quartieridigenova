@@ -1,14 +1,14 @@
 import { Component, inject, computed } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { DataService } from '../../../../core/services/data.service';
-import { FormatNumberPipe } from '../../../../core/pipes/format-number-pipe';
 import { Search } from '../../../search/search';
 import { ChartComponent } from '../../../chart/chart';
+import { CountUpComponent } from "../../../count-up/count-up";
 
 @Component({
   selector: 'app-municipi-list',
   standalone: true,
-  imports: [RouterModule, FormatNumberPipe, Search, ChartComponent],
+  imports: [RouterModule, Search, ChartComponent, CountUpComponent],
   templateUrl: './municipi-list.html',
   styleUrl: './municipi-list.css',
 })

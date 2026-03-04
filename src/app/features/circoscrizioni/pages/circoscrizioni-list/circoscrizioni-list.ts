@@ -1,12 +1,12 @@
 import { Component, inject, computed, effect } from '@angular/core';
 import { DataService } from '../../../../core/services/data.service';
 import { ActivatedRoute, RouterModule, Router } from '@angular/router';
-import { FormatNumberPipe } from '../../../../core/pipes/format-number-pipe';
 import { ChartComponent } from '../../../chart/chart';
+import { CountUpComponent } from '../../../count-up/count-up';
 
 @Component({
   selector: 'app-circoscrizioni-list',
-  imports: [RouterModule, FormatNumberPipe, ChartComponent],
+  imports: [RouterModule, ChartComponent, CountUpComponent],
   templateUrl: './circoscrizioni-list.html',
   styleUrl: './circoscrizioni-list.css',
 })
