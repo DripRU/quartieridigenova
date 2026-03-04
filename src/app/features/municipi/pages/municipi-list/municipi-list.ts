@@ -1,6 +1,6 @@
 import { Component, inject, computed } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MunicipiService } from '../../../../core/services/municipi.service';
+import { DataService } from '../../../../core/services/data.service';
 import { FormatNumberPipe } from '../../../../core/pipes/format-number-pipe';
 import { Search } from '../../../search/search';
 import { ChartComponent } from '../../../chart/chart';
@@ -13,14 +13,14 @@ import { ChartComponent } from '../../../chart/chart';
   styleUrl: './municipi-list.css',
 })
 export class MunicipiListComponent {
-  // constructor(private municipiService: MunicipiService) {}
-  // municipi$: Observable<Municipio[]> = this.municipiService.getMunicipi();
+  // constructor(private DataService: DataService) {}
+  // municipi$: Observable<Municipio[]> = this.DataService.getMunicipi();
 
-  // iniezione del servizio MunicipiService usando inject() invece del costruttore
-  private municipiService = inject(MunicipiService);
+  // iniezione del servizio DataService usando inject() invece del costruttore
+  private DataService = inject(DataService);
 
   // definiamo municipi come una signal che contiene un array di Municipio, inizialmente vuoto
-  municipi = this.municipiService.getMunicipi();
+  municipi = this.DataService.getMunicipi();
 
   chartData = computed(() =>
     this.municipi().map((municipio) => ({

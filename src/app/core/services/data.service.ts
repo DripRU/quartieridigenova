@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Municipio, Circoscrizione, SearchResult } from '../models/municipio.model';
 
 @Injectable({ providedIn: 'root' })
-export class MunicipiService {
+export class DataService {
   // definiamo l'URL del file JSON che contiene i dati dei municipi
   private apiUrl = 'assets/municipi.json';
   // definiamo un signal privato che conterrà l'elenco dei municipi, inizialmente vuoto
@@ -11,7 +11,6 @@ export class MunicipiService {
   // questa proprietà non è direttamente accessibile dall'esterno del servizio,
   // ma può essere aggiornata internamente e letta tramite un metodo pubblico
   private _municipi = signal<Municipio[]>([]);
-  private _circoscrizioni = signal<Circoscrizione[]>([]);
 
   // costruzione del servizio con l'iniezione di HttpClient
   constructor(private http: HttpClient) {
@@ -73,7 +72,7 @@ export class MunicipiService {
             popolazione: u.popolazione,
             circoscrizionePadreId: circoscrizione.id,
             circoscrizionePadreNome: circoscrizione.nome,
-            municipioPadreNome: municipio.nome
+            municipioPadreNome: municipio.nome,
           }),
         );
       }
